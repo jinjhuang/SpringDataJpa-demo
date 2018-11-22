@@ -1,0 +1,23 @@
+server:
+  port: 8081    #设置端口
+  tomcat:
+    uri-encoding: utf-8
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://130.211.63.202/db_dev?characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+    jpa:
+      hibernate:
+        ddl-auto: update  #配置自动建表：updata:没有表新建，有表更新操作,控制台显示建表语句
+      #        create----每次运行该程序，没有表格会新建表格，表内有数据会清空
+      #
+      #        create-drop----每次程序结束的时候会清空表
+      #
+      #        update----每次运行程序，没有表格会新建表格，表内有数据不会清空，只会更新
+      #
+      #        validate----运行程序会校验数据与数据库的字段类型是否相同，不同会报错
+
+      show-sql: true    #是否显示sql
